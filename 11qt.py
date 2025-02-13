@@ -63,9 +63,9 @@ class Widget(QWidget):
     def set_scale(self, n):
         self.scale += n
         if self.scale > MAX_SCALE:
-            self.scale = MIN_SCALE
+            self.scale -= 1
         elif self.scale < MIN_SCALE:
-            self.scale = MAX_SCALE
+            self.scale += 1
         self.set_image()
 
     def set_image(self):
